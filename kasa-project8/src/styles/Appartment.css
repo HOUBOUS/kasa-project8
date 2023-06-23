@@ -1,0 +1,19 @@
+.appartment{
+    
+   min-height: 230px;
+   background-image: linear-gradient(to top, #863535, #FF6060);
+   display: grid;
+   border-radius: 10px;
+   flex-basis: 30%;
+   align-items: end;
+}
+
+.appartment_title{
+   width: 40%;
+   color: #FFFFFF;
+   margin-left: 8px;
+   
+}
+
+
+

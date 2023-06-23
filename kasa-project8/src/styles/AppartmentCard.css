@@ -1,0 +1,21 @@
+.card{
+    background-color: #F6F6F6;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    min-height: 50vh;
+    gap: 20px;
+    justify-content: center;
+    
+}
+
+@media screen and (max-width: 767px) {
+
+    .card{
+      background-color: #FFFFFF;
+      justify-content: center;
+      padding: 0;
+      flex-direction: column;
+    }
+}

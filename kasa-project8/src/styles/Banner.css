@@ -1,0 +1,18 @@
+.banner{
+    font-size: 24px;
+    font-weight: 500;
+    /* padding-inline: 2rem; */
+    background-image: url('../assets/Banner.png');
+    background-position: center;
+    background-size: cover;
+    height: 223px;
+    margin: auto;
+    max-width: 80vw;
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    color: #FFFFFF;
+    opacity: 0.9;
+    margin-bottom: 50px;
+
+}
