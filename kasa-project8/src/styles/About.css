@@ -1,0 +1,14 @@
+
+.about_cover_img{
+    margin: auto;
+    max-width: 80vw;
+
+}
+.about_cover_img{
+    
+    background-image: url('../assets/about_cover.png');
+    background-position: center;
+    background-size: cover;
+    height: 223px;    
+    border-radius: 20px;
+}

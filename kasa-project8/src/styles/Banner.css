@@ -1,13 +1,12 @@
 .banner{
     font-size: 24px;
     font-weight: 500;
-    /* padding-inline: 2rem; */
     background-image: url('../assets/Banner.png');
     background-position: center;
     background-size: cover;
     height: 223px;
     margin: auto;
-    max-width: 80vw;
+    max-width: 82vw;
     border-radius: 25px;
     display: grid;
     place-items: center;

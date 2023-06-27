@@ -1,0 +1,103 @@
+.accomodation{
+    color: #FF6060;
+    font-family: 🇲🇸 , sans-serif;
+    max-width: 82vw;
+    margin: auto;
+
+
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    width: 75px;
+
+}
+
+button{
+    color: #FFFFFF ;
+    font-size: 11px;
+    width: 20%;
+    display: inline;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #FF6060 ;
+    margin-right: 10px;
+    margin-bottom: 12px;
+}
+
+button:hover{
+    box-shadow: 0 2px 8px rgb(0, 0, 0);
+   
+}
+
+.accomodation_header{
+    display: flex;
+    justify-content: space-between;
+
+}
+.accomodation_host_badge{
+    display: flex;
+    flex-direction: row;
+}
+.accomodation_text{
+    margin: 0px;
+}
+.accomodation_badge{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 1);
+
+}
+
+.on{
+    color: #FF6060;
+}
+
+.off{
+    color: rgba(196, 196, 196, 1);
+}
+               
+.accomodation_img{
+    border-radius: 25px;
+    background-image: url('../assets/about_cover.png');
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    display: grid;
+    place-items: center;
+    color: #FFFFFF;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    box-shadow: 0px 5px 15px rgb(147 157 165/ 20%);
+
+
+}
+
+
+
+.accomodation_host{
+   display: flex;
+   flex-direction: column;
+}
+
+.appartment_description_banner{
+    display: flex;
+ gap: 10px;
+ 
+}

@@ -1,0 +1,21 @@
+.not_found{
+    text-align: center;
+    color: #FF6060;
+}
+.not_found_title{
+    font-size: 180px;
+    font-weight: 900;
+    margin-top: 30px;
+    
+
+}
+.not_found_text{
+    color:#FF6060;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.not_found_link{
+    color: #FF6060;
+    
+}

@@ -1,0 +1,28 @@
+
+
+.accomodation_description{
+   max-width: 82vw;
+   margin: auto;
+   padding-bottom: 10px;
+   font-size: 12px;
+}
+
+.description_bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF6060;
+    color: #FFFFFF;
+    border-radius: 10px;
+    height: 30px;
+    padding: 5px;
+    
+}
+
+.description_bar img {
+    cursor: pointer;
+}
+
+.description_bar i{
+    font-size: 20px;
+}
