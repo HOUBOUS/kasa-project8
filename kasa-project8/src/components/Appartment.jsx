@@ -2,12 +2,14 @@ import React from 'react'
 import '../styles/Appartment.css'
 import { NavLink } from 'react-router-dom'
 
-function Appartment() {
+function Appartment(props) {
+  
   return (
     
     <div className='appartment'>
       <NavLink to="/accomodation">
-        <div className='appartment_title'>Titre de la location</div>
+        <img src={props.imageUrl} alt="" />
+        <div className='appartment_title'>{props.title}</div>
         
       </NavLink>
 
