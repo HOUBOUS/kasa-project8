@@ -1,33 +1,19 @@
 import React from 'react'
 import '../styles/AppartmentCard.css'
-import Appartment from './Appartment'
-import {useEffect, useState} from "react"
+// import Appartment from './Appartment'
+// // // import {useEffect, useState} from "react"
+// import datas from '../datas/datas'
+import { Link } from 'react-router-dom'
 
+function AppartmentCard({id, title, cover}) {
 
-function AppartmentCard() {
-
-    const[accomodations, setAccomodations] = useState([]);
-
-    useEffect(fetchAccomodations, [])
-
-    function fetchAccomodations(){
-        fetch("datas.json")
-        .then (resp => resp.json())
-        .then (resp => setAccomodations(resp))
-        .catch (console.error);
-
-    }
-    return(
-        <div className="card">
-            {accomodations.map((accomodation) => ( 
-            <Appartment title={accomodation.title} imageUrl={accomodation.cover}/>
-            
-            
-            
-            ))}
-            
-            
-        </div>
-    )
-}
+    
+     return(
+      <Link to={`/accomodation/${id}`} className='appartment_card'>
+        <img src={cover} alt="cover" />
+        <h3 className='appartment_card_title'>{title}</h3>
+      </Link>
+    
+     )
+}console.log("AppartmentCard", AppartmentCard)
 export default AppartmentCard

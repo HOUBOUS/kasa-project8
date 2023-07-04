@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/PortfolioAccomodation.css'
 import datas from '../datas/datas.js'
-import Appartment from './Appartment.jsx'
+import Appartment from './GalleryAppartments.jsx'
 
 
 function PortfolioAccomodation() {
