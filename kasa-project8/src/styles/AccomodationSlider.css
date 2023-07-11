@@ -1,0 +1,53 @@
+.accomodation_slider{
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 20px;
+
+}
+
+.slider .fa-chevron-left {
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 2;
+    font-size: xxx-large;
+    cursor: pointer;
+    top: 35%;
+    left: 11%;
+
+}
+
+.fa-chevron-left:hover {
+    
+    transform: scale(1.09);
+    transition: 0.5s ease-in-out;
+    
+}
+
+.slider .fa-chevron-right{
+    color: #FFFFFF;
+    position: absolute;
+    z-index: 2;
+    font-size: xxx-large;
+    cursor: pointer;
+    top: 35%;
+    right: 11%;
+
+
+}
+
+.slider img{
+    height: 400px;
+   object-fit: cover;
+   width: 100%;
+
+}

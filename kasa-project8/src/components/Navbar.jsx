@@ -2,6 +2,7 @@ import React from 'react'
 import '../styles/Navbar.css'
 import {NavLink} from "react-router-dom"
 
+
 function Navbar(){
     return(
         <div className='navbar'>

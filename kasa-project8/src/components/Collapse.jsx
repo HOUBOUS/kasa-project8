@@ -1,40 +1,47 @@
 import React from 'react'
 import { useState } from 'react'
+import '../styles/Collapse.css'
+
 
 
 function Collapse({title, content}) {
   
-    const [displayDescription, setdisplayDescription] = useState(false); //Je defini un state du toggle qui prend la valeur  initiale false//
-    const display =(e) => {
-        setdisplayDescription(!displayDescription);
+    const [displayCollapse, setDisplayCollapse] = useState(false); //Je defini un state qui prend la valeur  initiale false//
+    const openCollapse = () => {
+
+      setDisplayCollapse (!displayCollapse)
+    
     }
 
     return (
-    <div className='collapse_description'>
-        <div className='collapse_title'> 
-          <h3> {title} </h3>
-          <span onclick={display}>
-               {displayDescription ? (
+    <div className='collapse_element' onClick={openCollapse}>
+        <h3 className='collapse_title'  > 
+
+          {title} 
+
+          <span >
+             {displayCollapse ?           
+                ( <i className="fa-solid fa-chevron-down"></i>)
+                : (
                  <i className="fa-solid fa-chevron-up"></i>
-               ) : (
-                 <i class="fa-solid fa-chevron-down"></i>
-               )}
+                 )
+              } 
+          </span>
 
-        </span>
-    </div>
-    <div className={displayDescription? 'collapse_content' : 'collapse_content_hidden'}>
-        {Array.isArray(content) ? content.map((item, index) =>{
+        </h3>
+    <div className={displayCollapse? 'collapse_content' : 'collapse_content_hidden'}>
+        {Array.isArray(content) ? (
+        content.map((item, index) => <p key={index}>{item}</p>)
 
-        return(
-          <p key={index}>{item}</p>
-        )
+        ) : ( <p>{content}</p>
 
-        }) : content
-      }
-        {/* {displayDescription && <p>{content}</p>} */}
+        )}
+      
+        
     </div>
 
-  </div>
+   </div>
+  
   )
 }
 
