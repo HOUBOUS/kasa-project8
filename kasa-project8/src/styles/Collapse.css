@@ -1,9 +1,19 @@
 
+@media screen and (max-width: 767px) {
+
+   .collapse_element{
+     max-width: 80vw;
+     
+   }
+
+}
+
 .collapse_element{
    margin: auto;
    max-width: 63vw;
    
 }
+
  .collapse_title{
    display: flex;
    flex-direction: row;
@@ -14,25 +24,24 @@
     color: #FFFFFF;
     background-color: #FF6060;
     cursor: pointer;
-    border-radius: 5px 5px 0 0;
+    border-radius: 6px;
     padding: 5px;
     margin: 0 auto;
     margin-top: 50px;
 
  }
  .collapse_content{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
     letter-spacing: 1px;
     opacity: 1;
     width: 98%;
     height: auto;
     background-color: #F7F7F7; 
-    border-radius: 0 0 5px 5px;
+    border-radius: 10px;
     padding: 5px;
-    letter-spacing: 1px;
     font-size: clamp(12px, 2vw, 16px);
+    z-index: -1;
+    position: relative;
+    top: -6px;
     color: #FF6060;
     transition: visibility 0.5s ease-in-out,
                 opacity 0.5s ease-in-out,

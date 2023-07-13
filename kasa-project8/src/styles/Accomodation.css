@@ -1,7 +1,7 @@
 .accomodation_page{
     color: #FF6060;
     font-family: 🇲🇸 , sans-serif;
-    max-width: 82vw;
+    max-width: 90vw;
     margin: auto;
 
 
@@ -35,7 +35,7 @@ h3{
 button{
     color: #FFFFFF ;
     font-size: 12px;
-    width: 30%;
+    width: 25%;
     display: inline;
     padding: 5px 15px;
     cursor: pointer;
@@ -59,6 +59,8 @@ button:hover{
     margin-top: 50px;
 
 }
+
+
 .accomodation_host_badge{
     display: flex;
     flex-direction: row;
@@ -68,9 +70,9 @@ button:hover{
 }
 .accomodation_badge{
     height: 50px;
-    width: 50px;
+    width: 25%;
     border-radius: 50%;
-    background-color: rgba(196, 196, 196, 1);
+  
 
 }
 
@@ -101,7 +103,7 @@ button:hover{
 
 
 .accomodation_host{
-   width: 150px;
+   width: 14%;
    position: relative;
    
 
@@ -122,6 +124,8 @@ button:hover{
  
 }
 
+
+
 .collapse_element_description{
     width: 45%;
 }
@@ -131,10 +135,68 @@ button:hover{
 
 }
 
+
+ 
 @media screen and (max-width: 767px) {
 
-    .appartment_description_banner{
-      display: flex;
-      
+    .accomodation_header{      
+      justify-content: center;
+       flex-direction: column;
+       margin-top: 0;
+
     }
+
+    .collapse_element_description {
+        width: 82vw;
+
+    }
+
+    .collapse_element_equipements{
+        width: 82vw;
+    }
+
+    .collapse_element{
+        margin: 0;
+        max-width: 82vw;
+    }
+
+   
+    .appartment_description_banner{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 70px;
+        
+ 
+     }
+
+     button{
+        margin-top: 10px;
+        width: 20%;
+
+     }
+
+    .accomodation_rate{
+        left: -5px;
+
+    }
+    
+    
+    .accomodation_host{
+        width: 100%;
+              
+     
+    }
+    
+    .accomodation_host_badge{
+        margin-top: 20px;
+    }
+
+
+    .accomodation_host_elements{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+
  }

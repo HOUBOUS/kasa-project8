@@ -23,10 +23,11 @@ function AccomodationSlider({pictures}) {
   return (
     <main className='Accomodation_slider'>
       <div className='slider'>
-      {length > 1 && (       
+        {length > 1 && (       
            <i className='fa-solid fa-chevron-left' onClick={previousSlide}></i>
 
-      )}
+        )}
+
         { length > 1 && (
 
                  <i className='fa-solid fa-chevron-right' onClick={nextSlide}></i>
@@ -43,8 +44,12 @@ function AccomodationSlider({pictures}) {
        
        ))}
                   
-          
-          </div>
+          <span className='counter'> 
+            {displaySlide + 1} / {length}
+      
+          </span>
+
+      </div>
         
     </main>
   )

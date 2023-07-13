@@ -1,13 +1,14 @@
 .navbar{
+    max-width: 82vw;
     display: flex;
     align-items: center;
-    padding: 50px 80px;
+    padding: 50px 135px;
     background-color: white;
     border: 1px solid #FFFFFF;
     color: #FF6060;
     font-weight: 500;
     font-size: 18px;
-    gap: 30px;
+    gap: 50px;
     
 }
 
