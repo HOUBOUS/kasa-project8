@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../../styles/Accomodation.css'
-import Navbar from '../../components/Navbar.jsx'
+import Navbar from '../../components/Navbar'
 import Collapse from '../../components/Collapse'
 import AccomodationSlider from '../../components/AccomodationSlider'
 import { useParams } from 'react-router-dom'
@@ -37,16 +37,13 @@ function Accomodation() {
    
   return  (
 <div>
+
+
+    <Navbar />
    
     <div className='accomodation_page'>
-      
-
-         <Navbar />
-
-        
-
-            
-           <AccomodationSlider pictures={datasSelectedAccomodation[0].pictures} numberPhotos={datasSelectedAccomodation[0].pictures.length}/>
+                          
+      <AccomodationSlider pictures={datasSelectedAccomodation[0].pictures} numberPhotos={datasSelectedAccomodation[0].pictures.length}/>
 
        
 

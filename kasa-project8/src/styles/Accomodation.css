@@ -14,7 +14,7 @@ h1{
 }
 
 h2{
-    font-size: 16px;
+    font-size: 48px;
     font-weight: 400;
 }
 
@@ -71,8 +71,11 @@ button:hover{
 .accomodation_badge{
     height: 50px;
     width: 25%;
+   
+}
+
+.accomodation_badge img {
     border-radius: 50%;
-  
 
 }
 
@@ -158,6 +161,11 @@ button:hover{
     .collapse_element{
         margin: 0;
         max-width: 82vw;
+    }
+
+    .collapse_title{
+        width: 106%;
+
     }
 
    

@@ -9,7 +9,7 @@ function AccomodationSlider({pictures}) {
   
   const [displaySlide, setDisplaySlide]= useState(0)
 
-  const length =  pictures.length// A revoi en ajoutant index 
+  const length =  pictures.length
   
   const nextSlide = () => {
     setDisplaySlide (displaySlide === length - 1 ? 0 : displaySlide + 1)
@@ -43,12 +43,16 @@ function AccomodationSlider({pictures}) {
           />
        
        ))}
-                  
+       
+         { length > 1 && (  
           <span className='counter'> 
+          
             {displaySlide + 1} / {length}
+
+           
       
           </span>
-
+ )}
       </div>
         
     </main>
