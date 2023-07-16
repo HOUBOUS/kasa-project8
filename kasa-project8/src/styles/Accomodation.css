@@ -154,17 +154,25 @@ button:hover{
 
     }
 
+    h2{
+        font-size: 18px;
+    }
+
     .collapse_element_equipements{
         width: 82vw;
     }
 
     .collapse_element{
-        margin: 0;
+        margin: auto;
         max-width: 82vw;
     }
 
+    .collapse_content{
+       max-width: 82vw;
+    }
+
     .collapse_title{
-        width: 106%;
+        max-width: 82vw;
 
     }
 

@@ -63,3 +63,21 @@
     bottom: 200px;
 
 }
+
+
+@media screen and (max-width: 767px) {
+
+    .slider .fa-chevron-right{      
+        top: 35%;
+
+    }
+
+    .slider .fa-chevron-left{
+        top: 35%;
+    }
+
+
+    .slider .counter{
+        bottom: 385px;
+    }
+}

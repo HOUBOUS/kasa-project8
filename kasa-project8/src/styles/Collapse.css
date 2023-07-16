@@ -1,13 +1,4 @@
 
-@media screen and (max-width: 767px) {
-
-   .collapse_element{
-     max-width: 80vw;
-     
-   }
-
-}
-
 .collapse_element{
    margin: auto;
    max-width: 63vw;
@@ -65,3 +56,14 @@
 
 
  }
+
+ @media screen and (max-width: 767px) {
+
+   .collapse_element{
+      margin: auto;
+     max-width: 80vw;
+
+     
+   }
+
+}

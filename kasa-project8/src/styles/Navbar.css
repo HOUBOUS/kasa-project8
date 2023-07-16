@@ -27,3 +27,19 @@
 .navbar :first-child{
     margin-right: auto;
 }
+
+
+
+ 
+@media screen and (max-width: 767px) {
+
+    .navbar{      
+        
+        padding: 30px 25px;
+        font-size: 12px;
+        gap: 20px;
+        
+
+    }
+
+}
