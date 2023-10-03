@@ -18,21 +18,21 @@ function Accomodation() {
 
    const idAccomodation = useParams ("id").id
 
-   const datasSelectedAccomodation = datas.filter(datas => datas.id === idAccomodation)
+   const datasSelectedAccomodation = datas.find(datas => datas.id === idAccomodation)
    
 
    useEffect(() =>{
-      const datasSelectedAccomodation = datas.filter(datas => datas.id === idAccomodation)
+      const datasSelectedAccomodation = datas.find(datas => datas.id === idAccomodation)
      
-     setSelectedAccomodation(datasSelectedAccomodation[0].pictures)
+     setSelectedAccomodation(datasSelectedAccomodation.pictures)
    }, [idAccomodation])
 
    console.log("selectedAccomodation", selectedAccomodation)
 
-   const owner = datasSelectedAccomodation[0].host.name.split(' ')
-   const rating = datasSelectedAccomodation[0].rating 
-   const description = datasSelectedAccomodation[0].description
-   const equipements = datasSelectedAccomodation[0].equipments
+   const owner = datasSelectedAccomodation.host.name.split(' ')
+   const rating = datasSelectedAccomodation.rating 
+   const description = datasSelectedAccomodation.description
+   const equipements = datasSelectedAccomodation.equipments
   
    
   return  (
@@ -43,16 +43,17 @@ function Accomodation() {
    
     <div className='accomodation_page'>
                           
-      <AccomodationSlider pictures={datasSelectedAccomodation[0].pictures} numberPhotos={datasSelectedAccomodation[0].pictures.length}/>
+      <AccomodationSlider pictures={datasSelectedAccomodation.pictures} 
+      numberPhotos={datasSelectedAccomodation.pictures.length}/>
 
        
 
       <section className='accomodation_header'>
          <div className='accomodation_title'>
-               <h1>{datasSelectedAccomodation[0].title} </h1>
-               <h2>{datasSelectedAccomodation[0].location}</h2>
+               <h1>{datasSelectedAccomodation.title} </h1>
+               <h2>{datasSelectedAccomodation.location}</h2>
                <span className='accomodation_tag'>
-                  {datasSelectedAccomodation[0].tags.map((tag, index) => {
+                  {datasSelectedAccomodation.tags.map((tag, index) => {
 
                      return (
                         
@@ -73,7 +74,7 @@ function Accomodation() {
                    <h3>{owner?.[1]}</h3>          
                </div>
                 <div className='accomodation_badge'>
-                  <img src={datasSelectedAccomodation[0].host.picture} alt="hostPicture" />
+                  <img src={datasSelectedAccomodation.host.picture} alt="hostPicture" />
 
                 </div>
              </span>
