@@ -67,17 +67,19 @@
 
 @media screen and (max-width: 767px) {
 
-    .slider .fa-chevron-right{      
-        top: 35%;
+    .slider img{
+       height: 255px;
 
     }
 
-    .slider .fa-chevron-left{
-        top: 35%;
+    .slider .fa-chevron-right,
+    .slider .fa-chevron-left
+    {      
+        top: 32%;
+        font-size: large;
     }
-
 
     .slider .counter{
-        bottom: 385px;
+        bottom: 375px;
     }
 }

@@ -1,15 +1,14 @@
 .body{
     padding-inline: 80px;
-
+    overflow-x: hidden;
 }
 
 
 @media screen and (max-width: 767px) {
 
     .body{      
-        padding-inline: 0px;
-        max-width: 92vw;
-        margin: auto;
+        padding-inline: 30px;
+        
 
     }
 

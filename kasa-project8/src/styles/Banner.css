@@ -6,7 +6,7 @@
     background-size: cover;
     height: 223px;
     margin: auto;
-    max-width: 82vw;
+    max-width: 93vw;
     border-radius: 25px;
     display: grid;
     place-items: center;
@@ -19,8 +19,9 @@
 
 @media screen and (max-width: 767px) {
 
-    .banner{      
-        max-width: 92vw;
+    .banner{     
+      height: 110px; 
+      margin-bottom: 30px;
         
 
     }

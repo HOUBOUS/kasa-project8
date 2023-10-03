@@ -9,15 +9,50 @@
     background-image: url('../assets/about_cover.png');
     background-position: center;
     background-size: cover;
-    height: 223px;    
+    height: 200px;    
     border-radius: 20px;
     margin-bottom: 30px;
 }
 
 .collapse_element{
    margin: auto;
-   max-width: 63vw;
+   max-width: 75vw;
    
 }
 
+
+@media screen and (max-width: 767px) {
+
+    
+    .about_details
+    {
+        width: 93%;
+        margin: -29px auto;
+
+    }
+
+    
+    .about_collapse{
+    margin: -33px 5px;
+       
+   }
+
+   .about_cover_img{
+    
+    max-width: 95vw;
+}
+          
+   .collapse_element{
+    
+    max-width: 98%;
+   
+ }
+ .collapse_title{
+    
+    max-width: 98%;
+   
+ }
+
+
+}
 

@@ -1,15 +1,16 @@
 .navbar{
-    max-width: 82vw;
+    max-width: 88vw;
     display: flex;
     align-items: center;
-    padding: 50px 135px;
+    padding: 50px 52px;
     background-color: white;
     border: 1px solid #FFFFFF;
     color: #FF6060;
     font-weight: 500;
     font-size: 18px;
     gap: 50px;
-    
+    padding-inline: 80px;
+    overflow-x: hidden;
 }
 
 .navbar a {
@@ -35,8 +36,8 @@
 
     .navbar{      
         
-        padding: 30px 25px;
-        font-size: 12px;
+        padding: 25px 35px;
+        font-size: 10px;
         gap: 20px;
         
 
