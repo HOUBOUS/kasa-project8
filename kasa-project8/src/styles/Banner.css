@@ -11,7 +11,7 @@
     display: grid;
     place-items: center;
     color: #FFFFFF;
-    opacity: 1;
+    filter: blur(0.5);
     margin-bottom: 50px;
 
 }
