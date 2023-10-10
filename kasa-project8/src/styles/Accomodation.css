@@ -1,6 +1,6 @@
 .accomodation_page{
     color: #FF6060;
-    font-family: 🇲🇸 , sans-serif;
+    font-family: "Montserrat" , sans-serif;
     max-width: 85vw;
     margin: auto;
 
@@ -171,6 +171,7 @@ button:hover{
     .collapse_element_equipements
     {
         width: 93vw;
+        
 
     }
 
@@ -178,11 +179,12 @@ button:hover{
     .collapse_element{
         margin: 0;
         max-width: 100%;
+        
     }
 
-    /* .collapse_content{
-       max-width: 82vw;
-    } */
+     /* .collapse_content{
+      height: 300px;
+    }  */
 
     .collapse_title{
         width: 100%;

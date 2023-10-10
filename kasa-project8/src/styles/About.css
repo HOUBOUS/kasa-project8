@@ -33,7 +33,7 @@
 
     
     .about_collapse{
-    margin: -33px 5px;
+    margin: -25px 5px;
        
    }
 
@@ -45,11 +45,13 @@
    .collapse_element{
     
     max-width: 98%;
+    margin: auto;
    
  }
  .collapse_title{
     
     max-width: 98%;
+    padding: 7px;
    
  }
 

@@ -1,48 +1,42 @@
-import React from 'react'
-import { useState } from 'react'
-import '../styles/Collapse.css'
+import React from "react";
+// import { useState } from "react";
+import "../styles/Collapse.css";
 
+function Collapse({ title, content, isOpen, onToggle }) {
+  // const [displayCollapse, setDisplayCollapse] = useState(false); //Je defini un state qui prend la valeur  initiale false//
 
+  const toggleCollapse = () => {
+    onToggle(!isOpen);
+  };
+  console.log(content);
 
-function Collapse({title, content}) {
-  
-    const [displayCollapse, setDisplayCollapse] = useState(false); //Je defini un state qui prend la valeur  initiale false//
-    const openCollapse = () => {
-
-      setDisplayCollapse (!displayCollapse)
-    
-    }
-
-    return (
-    <div className='collapse_element' onClick={openCollapse}>
-        <h3 className='collapse_title'  > 
-
-          {title} 
-
-          <span >
-             {displayCollapse ?           
-                ( <i className="fa-solid fa-chevron-down"></i>)
-                : (
-                 <i className="fa-solid fa-chevron-up"></i>
-                 )
-              } 
-          </span>
-
-        </h3>
-    <div className={displayCollapse? 'collapse_content' : 'collapse_content_hidden'}>
-        {Array.isArray(content) ? (
-        content.map((item, index) => <p key={index}>{item}</p>)
-
-        ) : ( <p>{content}</p>
-
-        )}
+  return (
+    <div
+      className="collapse_element"
       
-        
-    </div>
+    >
+      <h3 className="collapse_title" onClick={toggleCollapse}>
+        {title}
 
-   </div>
-  
-  )
+        <span>
+          {isOpen ? (
+            <i className="fa-solid fa-chevron-down"></i>
+          ) : (
+            <i className="fa-solid fa-chevron-up"></i>
+          )}
+        </span>
+      </h3>
+      {isOpen && (
+        <div  className="collapse_content">
+          {Array.isArray(content) ? (
+            content.map((item, index) => <li key={index}>{item}</li>)
+          ) : (
+            <p>{content}</p>
+          )}
+        </div>
+      )}
+    </div>
+  );
 }
 
-export default Collapse
+export default Collapse;

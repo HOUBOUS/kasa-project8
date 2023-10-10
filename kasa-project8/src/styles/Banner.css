@@ -1,6 +1,4 @@
-.banner{
-    font-size: 24px;
-    font-weight: 500;
+.banner{    
     background-image: url('../assets/Banner.png');
     background-position: center;
     background-size: cover;
@@ -10,9 +8,16 @@
     border-radius: 25px;
     display: grid;
     place-items: center;
-    color: #FFFFFF;
     filter: blur(0.5);
     margin-bottom: 50px;
+
+}
+
+.banner_text{
+  color: #FFFFFF;
+  font-size: 45px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
 
 }
 
@@ -23,7 +28,16 @@
       height: 140px; 
       margin-bottom: 30px;
         
-
     }
+
+    
+  .banner_text{
+    
+     border: solid 3px red;
+     font-size: 20px;
+     
+     
+
+  }
 
 }

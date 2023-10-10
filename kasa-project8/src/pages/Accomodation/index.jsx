@@ -1,114 +1,127 @@
-import React, { useEffect, useState } from 'react'
-import '../../styles/Accomodation.css'
-import Navbar from '../../components/Navbar'
-import Collapse from '../../components/Collapse'
-import AccomodationSlider from '../../components/AccomodationSlider'
-import { useParams } from 'react-router-dom'
-import datas from '../../datas/datas'
-import redStar from '../../assets/redStar.png'
-import greyStar from '../../assets/greyStar.png'
-import Footer from '../../components/Footer'
+import React, {useState } from "react";
+import "../../styles/Accomodation.css";
+import Navbar from "../../components/Navbar";
+import Collapse from "../../components/Collapse";
+import AccomodationSlider from "../../components/AccomodationSlider";
+import { useParams } from "react-router-dom";
+import datas from "../../datas/datas";
+import redStar from "../../assets/redStar.png";
+import greyStar from "../../assets/greyStar.png";
+import Footer from "../../components/Footer";
 
 // import AccomodationSlider from '../../components/AccomodationSlider'
 
-
 function Accomodation() {
-   
-   const[selectedAccomodation, setSelectedAccomodation] = useState([]);
-
-   const idAccomodation = useParams ("id").id
-
-   const datasSelectedAccomodation = datas.find(datas => datas.id === idAccomodation)
-   
-
-   useEffect(() =>{
-      const datasSelectedAccomodation = datas.find(datas => datas.id === idAccomodation)
-     
-     setSelectedAccomodation(datasSelectedAccomodation.pictures)
-   }, [idAccomodation])
-
-   console.log("selectedAccomodation", selectedAccomodation)
-
-   const owner = datasSelectedAccomodation.host.name.split(' ')
-   const rating = datasSelectedAccomodation.rating 
-   const description = datasSelectedAccomodation.description
-   const equipements = datasSelectedAccomodation.equipments
+  const [isOpen, setIsOpen] = useState([]);
+  const [height, setHeight] = useState([]);
   
-   
-  return  (
-<div>
+  const handleToggle = (index) => {
+    const updatedIsOpen = [...isOpen];
+    updatedIsOpen[index] = !updatedIsOpen[index];
+    const upDateHeight = [...height];
 
+    setIsOpen(updatedIsOpen);
+    if (isOpen[index]) {
+      upDateHeight[index] = "230";
+    } else {
+      upDateHeight[index] = 0;
+    }
 
-    <Navbar />
-   
-    <div className='accomodation_page'>
-                          
-      <AccomodationSlider pictures={datasSelectedAccomodation.pictures} 
-      numberPhotos={datasSelectedAccomodation.pictures.length}/>
+    setHeight(upDateHeight);
 
-       
+    console.log(isOpen);
+  };
 
-      <section className='accomodation_header'>
-         <div className='accomodation_title'>
-               <h1>{datasSelectedAccomodation.title} </h1>
-               <h2>{datasSelectedAccomodation.location}</h2>
-               <span className='accomodation_tag'>
-                  {datasSelectedAccomodation.tags.map((tag, index) => {
+  const idAccomodation = useParams("id").id;
 
-                     return (
-                        
-                        <button key={index}>{tag}</button>
+  console.log(idAccomodation);
 
-               
-                     )
-                  })}
-                
-               </span>
+  
+    const selectedAccomodation = datas.find(
+      (datas) => datas.id === idAccomodation
+    );
+    
+    console.log(selectedAccomodation);
 
-         </div>
-         <div className='accomodation_host'>
-            <div className='accomodation_host_elements'>
-             <span className='accomodation_host_badge'>
-               <div className='accomodation_text'>
-                   <h3 >{owner?.[0]} </h3>     
-                   <h3>{owner?.[1]}</h3>          
-               </div>
-                <div className='accomodation_badge'>
-                  <img src={datasSelectedAccomodation.host.picture} alt="hostPicture" />
+ 
 
+  return (
+    <div>
+      <Navbar />
+
+      <div className="accomodation_page">
+        <AccomodationSlider
+          pictures={selectedAccomodation.pictures}
+          numberPhotos={selectedAccomodation.pictures.length}
+        />
+
+        <section className="accomodation_header">
+          <div className="accomodation_title">
+            <h1>{selectedAccomodation.title} </h1>
+            <h2>{selectedAccomodation.location}</h2>
+            <span className="accomodation_tag">
+              {selectedAccomodation.tags.map((tag, index) => {
+                return <button key={index}>{tag}</button>;
+              })}
+            </span>
+          </div>
+          <div className="accomodation_host">
+            <div className="accomodation_host_elements">
+              <span className="accomodation_host_badge">
+                <div className="accomodation_text">
+                  <h3>{selectedAccomodation.host.name.split(' ')[0]} </h3>
+                  <h3>{selectedAccomodation.host.name.split(' ')[1]}</h3>
                 </div>
-             </span>
-             <div className='accomodation_rate'>
+                <div className="accomodation_badge">
+                  <img
+                    src={selectedAccomodation.host.picture}
+                    alt="hostPicture"
+                  />
+                </div>
+              </span>
+              <div className="accomodation_rate">
                 {[...Array(5)].map((star, index) => {
-                  const ratingValue = index + 1
-                  return(
-                     <img key={index} src={ratingValue <= rating ? redStar : greyStar} alt=" number of stars" />
-                  )
+                  const ratingValue = index + 1;
+                  return (
+                    <img
+                      key={index}
+                      src={ratingValue <= selectedAccomodation.rating ? redStar : greyStar}
+                      alt=" number of stars"
+                    />
+                  );
                 })}
-               
-             </div>
+              </div>
             </div>
-         </div>
+          </div>
+        </section>
 
-      </section>
-      
-      <section className='appartment_description_banner'>
-
-         <span className='collapse_element_description'>
-              <Collapse title="Description" content={description} />
-         </span>
-         <span className='collapse_element_equipements'>
-              <Collapse title="Équipements" content={equipements} />
-         </span>
         
-      
-      </section>
+          <section className="appartment_description_banner">
+            <span className="collapse_element_description">
+              <Collapse
+                title="Description"
+                height={height[0]}
+                content={selectedAccomodation.description}
+                isOpen={isOpen[0]}
+                onToggle={() => handleToggle(0)}
+              />
+            </span>
+            <span className="collapse_element_equipements">
+              <Collapse
+                title="Équipements"
+                height={height[1]}
+                content={selectedAccomodation.equipments}
+                isOpen={isOpen[1]}
+                onToggle={() => handleToggle(1)}
+              />
+            </span>
+          </section>
+        
+      </div>
+
+      <Footer />
     </div>
-
-    <Footer />
-
-    </div> 
-  )
+  );
 }
 
-export default Accomodation
+export default Accomodation;
