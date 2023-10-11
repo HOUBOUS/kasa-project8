@@ -3,11 +3,12 @@ import "../../styles/Accomodation.css";
 import Navbar from "../../components/Navbar";
 import Collapse from "../../components/Collapse";
 import AccomodationSlider from "../../components/AccomodationSlider";
-import { useParams } from "react-router-dom";
+import { useParams,Navigate } from "react-router-dom";
 import datas from "../../datas/datas";
 import redStar from "../../assets/redStar.png";
 import greyStar from "../../assets/greyStar.png";
 import Footer from "../../components/Footer";
+// import Error from "./../Error";
 
 // import AccomodationSlider from '../../components/AccomodationSlider'
 
@@ -34,16 +35,15 @@ function Accomodation() {
 
   const idAccomodation = useParams("id").id;
 
-  console.log(idAccomodation);
-
-  
+ 
     const selectedAccomodation = datas.find(
       (datas) => datas.id === idAccomodation
     );
-    
     console.log(selectedAccomodation);
+    if (!selectedAccomodation) {
+      return <Navigate to="/Error" />
+    }
 
- 
 
   return (
     <div>
