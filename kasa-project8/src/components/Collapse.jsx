@@ -11,10 +11,7 @@ function Collapse({ title, content, isOpen, onToggle }) {
   console.log(content);
 
   return (
-    <div
-      className="collapse_element"
-      
-    >
+    <div className="collapse_element">
       <h3 className="collapse_title" onClick={toggleCollapse}>
         {title}
 
@@ -27,7 +24,7 @@ function Collapse({ title, content, isOpen, onToggle }) {
         </span>
       </h3>
       {isOpen && (
-        <div  className="collapse_content">
+        <div className="collapse_content">
           {Array.isArray(content) ? (
             content.map((item, index) => <li key={index}>{item}</li>)
           ) : (

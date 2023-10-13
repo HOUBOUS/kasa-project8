@@ -1,69 +1,60 @@
+.collapse_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #ff6060;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 5px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.collapse_content {
+  letter-spacing: 1px;
+  opacity: 1;
+  width: 100%;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: clamp(12px, 2vw, 16px);
+  z-index: -1;
+  position: relative;
+  top: -6px;
+  color: #ff6060;
+  transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    height 0.2s ease-in-out;
+  /*height: 180px;*/
+}
+.collapse_content p {
+  text-align: justify;
+  padding: 5px;
+}
 
- .collapse_title{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-between ;
-   align-items: center;
-   width: 100%;
-   font-size: 18px;
-   color: #FFFFFF;
-   background-color: #FF6060;
-   cursor: pointer;
-   border-radius: 6px;
-   padding: 5px;
-   margin: 0 auto;
-   margin-top: 50px;
+.collapse_content li{
+  padding-top: 10px;
+  list-style-type: none;
 
- }
- .collapse_content{
-    letter-spacing: 1px;
-    opacity: 1;
-    width: 100%;
-    background-color: #F7F7F7; 
-    border-radius: 10px;
-    padding: 5px;
-    font-size: clamp(12px, 2vw, 16px);
-    z-index: -1;
-    position: relative;
-    top: -6px;
-    color: #FF6060;
-    transition: visibility 0.5s ease-in-out,
-                opacity 0.5s ease-in-out,
-                height 0.2s ease-in-out;
+}
 
- }
- .collapse_content p{
-   text-align: justify;
-   padding: 5px;
-   
+.arrow {
+  transition: all 0.5s ease-in-out;
+}
+.fa-chevron-up {
+  transform: rotate(0deg);
+}
 
- }
- 
- 
- 
- .arrow{
-   transition: all 0.5s ease-in-out;
- }
- .fa-chevron-up{
-    transform: rotate(0deg);
-   
- }
- 
- .collapse_content_hidden{
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
+.collapse_content_hidden {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+}
 
-
- }
-
- @media screen and (max-width: 767px) {
-
-   .collapse_element{
-      
-     max-width: 80vw;
-
-     
-   }
-
+@media screen and (max-width: 767px) {
+  .collapse_element {
+    max-width: 80vw;
+  }
 }

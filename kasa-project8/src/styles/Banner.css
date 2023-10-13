@@ -1,43 +1,32 @@
-.banner{    
-    background-image: url('../assets/Banner.png');
-    background-position: center;
-    background-size: cover;
-    height: 223px;
-    margin: auto;
-    max-width: 93vw;
-    border-radius: 25px;
-    display: grid;
-    place-items: center;
-    filter: blur(0.5);
-    margin-bottom: 50px;
-
+.banner {
+  background-image: url("../assets/Banner.png");
+  background-position: center;
+  background-size: cover;
+  height: 223px;
+  margin: auto;
+  max-width: 93vw;
+  border-radius: 25px;
+  display: grid;
+  place-items: center;
+  filter: brightness(0.5);
+  margin-bottom: 50px;
 }
 
-.banner_text{
-  color: #FFFFFF;
+.banner_text {
+  color: #ffffff;
   font-size: 45px;
   font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-
+  font-family: 'Montserrat'
 }
 
-
 @media screen and (max-width: 767px) {
-
-    .banner{     
-      height: 140px; 
-      margin-bottom: 30px;
-        
-    }
-
-    
-  .banner_text{
-    
-     border: solid 3px red;
-     font-size: 20px;
-     
-     
-
+  .banner {
+    height: 140px;
+    margin-bottom: 30px;
   }
 
+  .banner_text {
+    /*border: solid 3px red;*/
+    font-size: 20px;
+  }
 }
